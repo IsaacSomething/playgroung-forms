@@ -12,5 +12,8 @@ $sidnav-width: 275px;
 
   .mat-sidenav-content {
     margin-left: $sidnav-width;
+    &.small {
+      margin-left: 0;
+    }
   }
 }
