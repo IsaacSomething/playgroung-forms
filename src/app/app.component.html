@@ -1,1 +1,19 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened>
+    <h3 class="title">Angular Base</h3>
+    <mat-nav-list>
+      <mat-list-item *ngFor="let item of [1, 1, 1, 1, 1, 1]">
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine>Item</h3>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar> . </mat-toolbar>
+
+    <div class="margin">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
