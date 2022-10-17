@@ -1,0 +1,199 @@
+/**
+ * Theme Palette
+ * Default set color palettes for primary, accent and warn
+ *
+ * To set a new color palette use the site below
+ * http://mcg.mbitson.com/
+ * 
+ **/
+
+:root {
+  --acth-primary: #fdbf2d;
+  --acth-primary-50: #fff7e6;
+  --acth-primary-100: #feecc0;
+  --acth-primary-200: #fedf96;
+  --acth-primary-300: #fed26c;
+  --acth-primary-400: #fdc94d;
+  --acth-primary-500: #fdbf2d;
+  --acth-primary-600: #fdb928;
+  --acth-primary-700: #fcb122;
+  --acth-primary-800: #fca91c;
+  --acth-primary-900: #fc9b11;
+  --acth-primary-A100: white;
+  --acth-primary-A200: #fffaf5;
+  --acth-primary-A400: #ffe4c2;
+  --acth-primary-A700: #ffd9a8;
+  --acth-primary-contrast-50: rgb(34, 34, 34);
+  --acth-primary-contrast-100: rgb(34, 34, 34);
+  --acth-primary-contrast-200: rgb(34, 34, 34);
+  --acth-primary-contrast-300: rgb(34, 34, 34);
+  --acth-primary-contrast-400: rgb(34, 34, 34);
+  --acth-primary-contrast-500: rgb(34, 34, 34);
+  --acth-primary-contrast-600: white;
+  --acth-primary-contrast-700: white;
+  --acth-primary-contrast-800: white;
+  --acth-primary-contrast-900: white;
+  --acth-primary-contrast-A100: rgb(34, 34, 34);
+  --acth-primary-contrast-A200: rgb(34, 34, 34);
+  --acth-primary-contrast-A400: rgb(34, 34, 34);
+  --acth-primary-contrast-A700: white;
+
+  --acth-accent: #5c5c5c;
+  --acth-accent-50: #ebebeb;
+  --acth-accent-100: #cecece;
+  --acth-accent-200: #aeaeae;
+  --acth-accent-300: #8d8d8d;
+  --acth-accent-400: #747474;
+  --acth-accent-500: #5c5c5c;
+  --acth-accent-600: #545454;
+  --acth-accent-700: #4a4a4a;
+  --acth-accent-800: #414141;
+  --acth-accent-900: #303030;
+  --acth-accent-A100: #747474;
+  --acth-accent-A200: #5c5c5c;
+  --acth-accent-A400: #545454;
+  --acth-accent-A700: #4a4a4a;
+  --acth-accent-contrast-50: rgb(34, 34, 34);
+  --acth-accent-contrast-100: rgb(34, 34, 34);
+  --acth-accent-contrast-200: rgb(34, 34, 34);
+  --acth-accent-contrast-300: rgb(34, 34, 34);
+  --acth-accent-contrast-400: rgb(34, 34, 34);
+  --acth-accent-contrast-500: rgb(34, 34, 34);
+  --acth-accent-contrast-600: rgb(34, 34, 34);
+  --acth-accent-contrast-700: rgb(34, 34, 34);
+  --acth-accent-contrast-800: white;
+  --acth-accent-contrast-900: white;
+  --acth-accent-contrast-A100: rgb(34, 34, 34);
+  --acth-accent-contrast-A200: rgb(34, 34, 34);
+  --acth-accent-contrast-A400: rgb(34, 34, 34);
+  --acth-accent-contrast-A700: rgb(34, 34, 34);
+
+  --acth-warn: #d72828;
+  --acth-warn-50: #fae5e5;
+  --acth-warn-100: #f3bfbf;
+  --acth-warn-200: #eb9494;
+  --acth-warn-300: #e36969;
+  --acth-warn-400: #dd4848;
+  --acth-warn-500: #d72828;
+  --acth-warn-600: #d32424;
+  --acth-warn-700: #cd1e1e;
+  --acth-warn-800: #c71818;
+  --acth-warn-900: #be0f0f;
+  --acth-warn-A100: #ffebeb;
+  --acth-warn-A200: #ffb8b8;
+  --acth-warn-A400: #ff8585;
+  --acth-warn-A700: #ff6c6c;
+  --acth-warn-contrast-50: rgb(34, 34, 34);
+  --acth-warn-contrast-100: rgb(34, 34, 34);
+  --acth-warn-contrast-200: rgb(34, 34, 34);
+  --acth-warn-contrast-300: rgb(34, 34, 34);
+  --acth-warn-contrast-400: rgb(34, 34, 34);
+  --acth-warn-contrast-500: white;
+  --acth-warn-contrast-600: white;
+  --acth-warn-contrast-700: white;
+  --acth-warn-contrast-800: white;
+  --acth-warn-contrast-900: white;
+  --acth-warn-contrast-A100: rgb(34, 34, 34);
+  --acth-warn-contrast-A200: white;
+  --acth-warn-contrast-A400: white;
+  --acth-warn-contrast-A700: white;
+}
+
+$acth-primary-palette: (
+  50: var(--acth-primary-50),
+  100: var(--acth-primary-100),
+  200: var(--acth-primary-200),
+  300: var(--acth-primary-300),
+  400: var(--acth-primary-400),
+  500: var(--acth-primary-500),
+  600: var(--acth-primary-600),
+  700: var(--acth-primary-700),
+  800: var(--acth-primary-800),
+  900: var(--acth-primary-900),
+  A100: var(--acth-primary-A100),
+  A200: var(--acth-primary-A200),
+  A400: var(--acth-primary-A400),
+  A700: var(--acth-primary-A700),
+  contrast: (
+    50: var(--acth-primary-contrast-50),
+    100: var(--acth-primary-contrast-100),
+    200: var(--acth-primary-contrast-200),
+    300: var(--acth-primary-contrast-300),
+    400: var(--acth-primary-contrast-400),
+    500: var(--acth-primary-contrast-500),
+    600: var(--acth-primary-contrast-600),
+    700: var(--acth-primary-contrast-700),
+    800: var(--acth-primary-contrast-800),
+    900: var(--acth-primary-contrast-900),
+    A100: var(--acth-primary-contrast-A100),
+    A200: var(--acth-primary-contrast-A200),
+    A400: var(--acth-primary-contrast-A400),
+    A700: var(--acth-primary-contrast-A700)
+  )
+);
+
+$acth-accent-palette: (
+  50: var(--acth-accent-50),
+  100: var(--acth-accent-100),
+  200: var(--acth-accent-200),
+  300: var(--acth-accent-300),
+  400: var(--acth-accent-400),
+  500: var(--acth-accent-500),
+  600: var(--acth-accent-600),
+  700: var(--acth-accent-700),
+  800: var(--acth-accent-800),
+  900: var(--acth-accent-900),
+  A100: var(--acth-accent-A100),
+  A200: var(--acth-accent-A200),
+  A400: var(--acth-accent-A400),
+  A700: var(--acth-accent-A700),
+  contrast: (
+    50: var(--acth-accent-contrast-50),
+    100: var(--acth-accent-contrast-100),
+    200: var(--acth-accent-contrast-200),
+    300: var(--acth-accent-contrast-300),
+    400: var(--acth-accent-contrast-400),
+    500: var(--acth-accent-contrast-500),
+    600: var(--acth-accent-contrast-600),
+    700: var(--acth-accent-contrast-700),
+    800: var(--acth-accent-contrast-800),
+    900: var(--acth-accent-contrast-900),
+    A100: var(--acth-accent-contrast-A100),
+    A200: var(--acth-accent-contrast-A200),
+    A400: var(--acth-accent-contrast-A400),
+    A700: var(--acth-accent-contrast-A700)
+  )
+);
+
+$acth-warn-palette: (
+  50: var(--acth-warn-50),
+  100: var(--acth-warn-100),
+  200: var(--acth-warn-200),
+  300: var(--acth-warn-300),
+  400: var(--acth-warn-400),
+  500: var(--acth-warn-500),
+  600: var(--acth-warn-600),
+  700: var(--acth-warn-700),
+  800: var(--acth-warn-800),
+  900: var(--acth-warn-900),
+  A100: var(--acth-warn-A100),
+  A200: var(--acth-warn-A200),
+  A400: var(--acth-warn-A400),
+  A700: var(--acth-warn-A700),
+  contrast: (
+    50: var(--acth-warn-contrast-50),
+    100: var(--acth-warn-contrast-100),
+    200: var(--acth-warn-contrast-200),
+    300: var(--acth-warn-contrast-300),
+    400: var(--acth-warn-contrast-400),
+    500: var(--acth-warn-contrast-500),
+    600: var(--acth-warn-contrast-600),
+    700: var(--acth-warn-contrast-700),
+    800: var(--acth-warn-contrast-800),
+    900: var(--acth-warn-contrast-900),
+    A100: var(--acth-warn-contrast-A100),
+    A200: var(--acth-warn-contrast-A200),
+    A400: var(--acth-warn-contrast-A400),
+    A700: var(--acth-warn-contrast-A700)
+  )
+);
