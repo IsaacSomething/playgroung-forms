@@ -7,6 +7,11 @@ body {
   margin: 0;
 }
 
+base-root {
+  display: flex;
+  height: 100%;
+}
+
 input,
 img {
   outline: none;

@@ -2,7 +2,7 @@ $positions: top, left, bottom, right;
 
 /* MARGINS */
 .margin {
-  margin: var(--acth-spacing) !important;
+  margin: var(--base-spacing) !important;
 }
 
 .no-margin {
@@ -11,13 +11,13 @@ $positions: top, left, bottom, right;
 
 @each $margin in $positions {
   .margin-#{$margin} {
-    margin-#{$margin}: var(--acth-spacing) !important;
+    margin-#{$margin}: var(--base-spacing) !important;
   }
 }
 
 /* PADDING */
 .padding {
-  padding: var(--acth-spacing) !important;
+  padding: var(--base-spacing) !important;
 }
 
 .no-padding {
@@ -26,7 +26,7 @@ $positions: top, left, bottom, right;
 
 @each $padding in $positions {
   .padding-#{$padding} {
-    padding-#{$padding}: var(--acth-spacing) !important;
+    padding-#{$padding}: var(--base-spacing) !important;
   }
 }
 
@@ -56,7 +56,7 @@ $text-color: primary, accent, warn;
 
 @each $name in $text-color {
   .text-#{$name} {
-    color: var(--acth-#{$name}) !important;
+    color: var(--base-#{$name}) !important;
   }
 }
 
