@@ -1,16 +1,26 @@
 <mat-sidenav-container>
-  <mat-sidenav mode="side" opened>
-    <h3 class="title">Angular Base</h3>
+  <mat-sidenav #sidenav mode="side" [opened]="!(small$ | async)">
+    <mat-toolbar>
+      <span class="sidenav-title">Angular Base</span> </mat-toolbar>
+
     <mat-nav-list>
-      <mat-list-item *ngFor="let item of [1, 1, 1, 1, 1, 1]">
+      <mat-list-item *ngFor="let item of [1, 1, 1, 1, 1, 1]" routerLink="/">
         <mat-icon matListIcon>folder</mat-icon>
         <h3 matLine>Item</h3>
       </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content>
-    <mat-toolbar> . </mat-toolbar>
+  <mat-sidenav-content [class.small]="small$ | async">
+    <mat-toolbar>
+      <button mat-icon-button *ngIf="small$ | async" (click)="sidenav.toggle()">
+        <mat-icon>{{ sidenav.opened ? 'menu_open' : 'menu' }}</mat-icon>
+      </button>
+      .
+      <span class="spacer"></span>
+      <button mat-icon-button><mat-icon>show_chart</mat-icon></button>
+      <button mat-icon-button><mat-icon>line_weight</mat-icon></button>
+    </mat-toolbar>
 
     <div class="margin">
       <router-outlet></router-outlet>
