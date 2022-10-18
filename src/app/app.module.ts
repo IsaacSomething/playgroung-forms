@@ -4,20 +4,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from '@angular/cdk/layout';
-const moduleImports = [BrowserModule, BrowserAnimationsModule, AppRoutingModule, LayoutModule];
+import { ToolbarModule } from './components/toolbar';
+import { MenuModule } from './components/menu';
+const moduleImports = [BrowserModule, BrowserAnimationsModule, AppRoutingModule, LayoutModule, ToolbarModule, MenuModule];
 
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-const materialImports = [MatSidenavModule, MatListModule, MatIconModule, MatToolbarModule, MatButtonModule];
+const materialImports = [MatSidenavModule];
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [...moduleImports, ...materialImports],
+  imports: [...materialImports, ...moduleImports],
   providers: [],
   bootstrap: [AppComponent]
 })
