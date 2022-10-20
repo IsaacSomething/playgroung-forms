@@ -2,7 +2,7 @@
 
 Basic project used for quickly cloning to test things out
 
-- "@angular/core": "^14.2.0"
+- "@angular/core": "^14.2.7"
 - "@angular/material": "^14.2.5"
 
 #### Prettier config
