@@ -2,6 +2,14 @@
 
 Basic project used for quickly cloning to test things out
 
+```
+git clone https://github.com/IsaacSomething/angular-base.git
+```
+
+```
+cd angular-base/ && npm install
+```
+
 - "@angular/core": "^14.2.7"
 - "@angular/material": "^14.2.5"
 
@@ -19,6 +27,7 @@ module.exports = {
  useTabs: false,
 };
 ```
+
 <br />
 
 ![alt text](./src/assets/demo.png)
