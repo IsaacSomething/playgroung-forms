@@ -4,8 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from '@angular/cdk/layout';
-import { ToolbarModule } from './components/toolbar';
-import { MenuModule } from './components/menu';
+import { ToolbarModule } from '@base/components/toolbar';
+import { MenuModule } from '@base/components/menu';
 const moduleImports = [BrowserModule, BrowserAnimationsModule, AppRoutingModule, LayoutModule, ToolbarModule, MenuModule];
 
 import { MatSidenavModule } from '@angular/material/sidenav';
