@@ -7,6 +7,18 @@ export const routeProps: Routes = [
     title: 'Home',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
     data: { icon: 'home' }
+  },
+  {
+    path: 'template',
+    title: 'Template Forms',
+    loadChildren: () => import('./template/template.module').then(m => m.TemplateModule),
+    data: { icon: 'description' }
+  },
+  {
+    path: 'reactive',
+    title: 'Reactive Forms',
+    loadChildren: () => import('./reactive/reactive.module').then(m => m.ReactiveModule),
+    data: { icon: 'article' }
   }
 ];
 

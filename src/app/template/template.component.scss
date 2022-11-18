@@ -1,0 +1,15 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.invalid {
+  color: rgb(130, 14, 14);
+  font-weight: bold;
+}
+
+.valid {
+  color: rgb(102, 206, 22);
+  font-weight: bold;
+}

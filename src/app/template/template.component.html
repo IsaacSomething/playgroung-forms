@@ -1,0 +1,117 @@
+<form #form="ngForm" (ngSubmit)="submit(form, $event)">
+  <mat-form-field>
+    <input
+      matInput
+      [(ngModel)]="formValues.email"
+      #email="ngModel"
+      type="email"
+      placeholder="Email"
+      value="value"
+      name="email"
+      required
+      minlength="3"
+      maxlength="10"
+      email
+      pattern="[a-z-@]+"
+      (ngModelChange)="emailChangeEvent($event)"
+    />
+    <mat-error *ngIf="email.errors?.['required']"> Email is required</mat-error>
+    <mat-error *ngIf="email.errors?.['minlength']"> Minimum {{ email.errors?.['minlength'].requiredLength }} required. </mat-error>
+    <mat-error *ngIf="email.errors?.['maxlength']"> Minimum {{ email.errors?.['maxlength'].requiredLength }} required. </mat-error>
+    <mat-error *ngIf="email.errors?.['email']"> A valid email is required. </mat-error>
+  </mat-form-field>
+  <br />
+  <mat-form-field>
+    <input
+      matInput
+      ngModel
+      #blurEvent="ngModel"
+      type="text"
+      placeholder="Blur Event"
+      value="value"
+      name="blurEvent"
+      minlength="4"
+      required
+      [ngModelOptions]="{ updateOn: 'blur' }"
+    />
+    <mat-error *ngIf="blurEvent.errors?.['required']">Blur event is required</mat-error>
+    <mat-error *ngIf="blurEvent.errors?.['minlength']"> Minimum {{ blurEvent.errors?.['minlength'].requiredLength }} required. </mat-error>
+  </mat-form-field>
+  <br />
+
+  <mat-form-field>
+    <input
+      matInput
+      ngModel
+      type="text"
+      placeholder="Standalone"
+      value="value"
+      name="standalone"
+      required
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </mat-form-field>
+  <br />
+
+  <mat-form-field>
+    <input
+      matInput
+      ngModel
+      #submitEvent="ngModel"
+      type="text"
+      placeholder="Submit Event"
+      value="value"
+      name="submitEvent"
+      minlength="4"
+      required
+      [ngModelOptions]="{ updateOn: 'submit' }"
+    />
+    <mat-error *ngIf="submitEvent.errors?.['required']">Submit event is required</mat-error>
+    <mat-error *ngIf="submitEvent.errors?.['minlength']">
+      Minimum {{ submitEvent.errors?.['minlength'].requiredLength }} required.
+    </mat-error>
+  </mat-form-field>
+  <br />
+
+  <mat-form-field>
+    <input
+      [(ngModel)]="formValues.password"
+      matInput
+      ngModel
+      #password="ngModel"
+      type="password"
+      placeholder="Password"
+      value="value"
+      name="password"
+      required
+    />
+    <mat-error *ngIf="password.errors?.['required']"> Password is required</mat-error>
+  </mat-form-field>
+
+  <div>
+    <button mat-stroked-button type="submit" [disabled]="!form.valid">Submit</button>
+    <button mat-stroked-button type="submit">Submit no disabled</button>
+  </div>
+
+  <br />
+</form>
+
+<p>
+  <strong>#form="ngForm"</strong> {{ form.value | json }} |
+  <span [class.valid]="form.valid" [class.invalid]="form.invalid">{{ form.valid | json }}</span>
+  ({{ form.errors | json }})
+</p>
+
+<p>
+  <strong>#email="ngModel":</strong> {{ email.value | json }} |
+  <span [class.valid]="email.valid" [class.invalid]="email.invalid">{{ email.valid | json }}</span>
+  ({{ email.errors | json }})
+</p>
+
+<p>
+  <strong>#password="ngModel"</strong> {{ password.value | json }} |
+  <span [class.valid]="password.valid" [class.invalid]="password.invalid">{{ password.valid | json }}</span>
+  ({{ password.errors | json }})
+</p>
+
+<p><strong>[(ngModel)]</strong> {{ formValues | json }}</p>
