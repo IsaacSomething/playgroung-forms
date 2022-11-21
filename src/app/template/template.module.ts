@@ -10,10 +10,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 const materialImports = [MatFormFieldModule, MatInputModule, MatButtonModule];
 
+import { PasswordStrengthDirective } from '../directives/password-strength.directive';
+import { OnlyOneErrorPipe } from '../pipe/only-one-error.pipe';
+
 import { TemplateComponent } from './template.component';
 
 @NgModule({
-  declarations: [TemplateComponent],
+  declarations: [TemplateComponent, PasswordStrengthDirective, OnlyOneErrorPipe],
   exports: [TemplateComponent],
   imports: [CommonModule, ...moduleImports, ...materialImports]
 })

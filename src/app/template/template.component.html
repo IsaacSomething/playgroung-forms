@@ -78,15 +78,23 @@
       [(ngModel)]="formValues.password"
       matInput
       ngModel
+      basePasswordStrength
       #password="ngModel"
       type="password"
       placeholder="Password"
       value="value"
       name="password"
       required
+      minlength="8"
     />
     <mat-error *ngIf="password.errors?.['required']"> Password is required</mat-error>
   </mat-form-field>
+  <ng-container *ngIf="password.errors | onlyOneError: ['minlength', 'passwordStrength'] as error">
+    <mat-error *ngIf="error?.['minlength']"> Minimum {{ error?.['minlength'].requiredLength }} required. </mat-error>
+    <mat-error *ngIf="error?.['passwordStrength']">Password is not strong enough</mat-error>
+  </ng-container>
+
+  <br />
 
   <div>
     <button mat-stroked-button type="submit" [disabled]="!form.valid">Submit</button>
@@ -95,6 +103,8 @@
 
   <br />
 </form>
+
+<br />
 
 <p>
   <strong>#form="ngForm"</strong> {{ form.value | json }} |
