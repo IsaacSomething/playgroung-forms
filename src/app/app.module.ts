@@ -6,7 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ToolbarModule } from '@base/components/toolbar';
 import { MenuModule } from '@base/components/menu';
-const moduleImports = [BrowserModule, BrowserAnimationsModule, AppRoutingModule, LayoutModule, ToolbarModule, MenuModule];
+import { MatNativeDateModule } from '@angular/material/core';
+const moduleImports = [
+  BrowserModule,
+  BrowserAnimationsModule,
+  AppRoutingModule,
+  LayoutModule,
+  ToolbarModule,
+  MenuModule,
+  MatNativeDateModule
+];
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 const materialImports = [MatSidenavModule];
@@ -16,7 +25,6 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [AppComponent],
   imports: [...materialImports, ...moduleImports],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

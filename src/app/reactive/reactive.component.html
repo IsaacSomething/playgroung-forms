@@ -1,1 +1,27 @@
-<p>reactive works!</p>
+<mat-vertical-stepper labelPosition="bottom" [linear]="true">
+  <mat-step [stepControl]="stepOne.stepOneForm">
+    <ng-template matStepLabel>[Details step one]</ng-template>
+
+    <base-step-one #stepOne></base-step-one>
+
+    <div>
+      <button mat-raised-button color="primary" matStepperNext>Continue</button>
+    </div>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>[Details step two]</ng-template>
+
+    <base-step-two></base-step-two>
+
+    <div>
+      <button mat-icon-button color="primary" matStepperPrevious class="margin-right"><mat-icon>arrow_back</mat-icon></button>
+      <button mat-raised-button color="primary" matStepperNext>Continue</button>
+    </div>
+  </mat-step>
+  <mat-step label="Step 2">
+    <ng-template matStepLabel>[Details step three]</ng-template>
+
+    <base-step-three></base-step-three>
+  </mat-step>
+</mat-vertical-stepper>

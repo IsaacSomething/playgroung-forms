@@ -1,0 +1,31 @@
+<form [formGroup]="stepOneForm">
+  <mat-form-field>
+    <input matInput placeholder="Title" formControlName="title" #title autocomplete="off" />
+    <mat-hint align="end">{{ title.value.length }} / {{ TITLE_MAX_LENGTH }}</mat-hint>
+  </mat-form-field>
+
+  <br />
+  <br />
+  <mat-form-field>
+    <mat-label>Date</mat-label>
+    <input matInput autocomplete="off" [matDatepicker]="picker" placeholder="Date" formControlName="releasedAt" />
+
+    <mat-datepicker-toggle matSuffix [for]="picker">
+      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <br />
+  <br />
+
+  <mat-checkbox formControlName="downloadsAllowed" color="primary">Downloads allowed</mat-checkbox>
+
+  <br />
+  <br />
+
+  <mat-form-field appearance="outline">
+    <mat-label>Description</mat-label>
+    <textarea matInput formControlName="longDescription"></textarea>
+  </mat-form-field>
+</form>
